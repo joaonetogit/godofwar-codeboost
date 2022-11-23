@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Lato', sans-serif;
+  color: $color-white;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include responsive(max-width, 768px) {
+    font-size: 50%;
+  }
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  background-color: $color-white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}

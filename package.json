@@ -1,0 +1,24 @@
+{
+  "name": "projeto-god-of-war-codeboost",
+  "version": "1.0.0",
+  "description": "DevProcess Codeboost",
+  "main": "index.js",
+  "author": "João Pinheiro",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "browser-sync": "^2.27.10",
+    "feather-icons": "^4.29.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.52.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "svgo": "^2.8.0"
+  }
+}

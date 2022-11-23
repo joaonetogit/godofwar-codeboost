@@ -1,0 +1,42 @@
+@mixin flex($direction, $align, $justify) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  align-items: $align;
+  -webkit-box-align: $align;
+  -moz-box-align: $align;
+  -ms-flex-align: $align;
+  justify-content: $justify;
+  -webkit-justify-content: $justify;
+  -webkit-box-pack: $justify;
+  -moz-box-pack: $justify;
+  -ms-flex-pack: $justify;
+}
+
+@mixin grid($qtd, $gap) {
+  display: grid;
+  grid-template-columns: repeat($qtd, 1fr);
+  gap: $gap;
+}
+
+@mixin responsive($screen, $screenSize) {
+  @media ($screen: $screenSize) {
+    @content;
+  }
+}
+
+@mixin image-scale() {
+  transform: scale(1.05);
+}
+
+@mixin image($width, $height) {
+  position: relative;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+}
