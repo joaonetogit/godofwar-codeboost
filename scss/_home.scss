@@ -99,3 +99,42 @@
     }
   }
 }
+
+.s-info-general {
+  padding: 8.1rem 0 5rem;
+  .features {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.2rem;
+      flex: 1;
+
+      .icon {
+        width: 3.047rem;
+        height: 3.047rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          @include img(contain);
+        }
+      }
+
+      .description {
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 160%;
+        color: #bdc2cb;
+      }
+    }
+  }
+}
