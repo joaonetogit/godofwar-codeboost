@@ -1,0 +1,46 @@
+header {
+  background-color: black;
+  padding: 1.4rem 0;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    margin-right: -12%;
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  .plataforms {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    span {
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 1.7rem;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem;
+        border: 1.5px solid #ffffff;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.7rem;
+      }
+    }
+  }
+}

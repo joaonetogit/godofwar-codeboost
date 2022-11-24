@@ -24,8 +24,8 @@
   gap: $gap;
 }
 
-@mixin responsive($screen, $screenSize) {
-  @media ($screen: $screenSize) {
+@mixin responsive($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
     @content;
   }
 }
@@ -39,4 +39,10 @@
   width: $width;
   height: $height;
   overflow: hidden;
+}
+
+@mixin img($type) {
+  width: 100%;
+  height: 100%;
+  object-fit: $type;
 }

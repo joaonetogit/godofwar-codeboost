@@ -4,20 +4,19 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Archivo', sans-serif;
   color: $color-white;
 }
 
 html {
   font-size: 62.5%;
 
-  @include responsive(max-width, 768px) {
+  @include responsive(768px) {
     font-size: 50%;
   }
 }
 
 img {
-  max-height: 100%;
   max-width: 100%;
   width: auto;
   object-fit: cover;
@@ -30,7 +29,7 @@ button {
 }
 
 body {
-  background-color: $color-white;
+  background-color: #000210;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
