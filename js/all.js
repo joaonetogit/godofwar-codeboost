@@ -1,1 +1,1 @@
-"use strict";AOS.init({duration:1400,once:!0}),window.onscroll=function(o){var n=document.querySelector(".s-header");console.log(window.scrollY),200<window.scrollY?n.style.backgroundColor="#27272d":n.style.backgroundColor="transparent"};
+"use strict";AOS.init({duration:1400,once:!0});var swiper=new Swiper(".slide-characters",{slidesPerView:4.5,spaceBetween:19,freeMode:!0,pagination:{clickable:!0},breakpoints:{768:{slidesPerView:3.2}}});
