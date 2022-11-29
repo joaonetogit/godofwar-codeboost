@@ -3,10 +3,22 @@
   align-items: center;
   gap: 1.5rem;
 
+  @include responsive(768px) {
+    justify-content: center;
+  }
+
   .text {
     font-weight: 500;
     font-size: 2rem;
     line-height: 2.2rem;
+
+    @include responsive(1200px) {
+      font-size: 1.8rem;
+    }
+
+    @include responsive(560px) {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -14,12 +26,30 @@
   font-weight: 700;
   font-size: 12.4rem;
   line-height: 97.5%;
+
+  @include responsive(1200px) {
+    font-size: 10rem;
+  }
+
+  @include responsive(560px) {
+    font-size: 6rem;
+  }
 }
 
 .paragraph-hero {
   font-weight: 500;
   font-size: 2.2rem;
   line-height: 140%;
+
+  @include responsive(1200px) {
+    font-size: 1.8rem;
+  }
+
+  @include responsive(560px) {
+    font-size: 1.6rem;
+    max-width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .title-section {
@@ -44,7 +74,7 @@
     position: relative;
     width: 100%;
     max-width: 38.4rem;
-    height: 52rem;
+    height: 48rem;
     display: flex;
     justify-content: center;
     overflow: hidden;

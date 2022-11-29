@@ -5,6 +5,19 @@
   background-attachment: fixed;
   padding: 16.4rem 0 23rem;
 
+  @include responsive(1200px) {
+    padding: 8rem 0;
+    background-position-x: 20%;
+  }
+
+  @include responsive(768px) {
+    padding: 6rem 0;
+  }
+
+  @include responsive(560px) {
+    padding: 4rem 0 4.8rem;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -19,6 +32,12 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+
+    @include responsive(768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 4.8rem;
+    }
   }
 
   .content {
@@ -26,8 +45,20 @@
     max-width: 78.2rem;
     z-index: 1;
 
+    @include responsive(1200px) {
+      max-width: 64rem;
+    }
+
+    @include responsive(768px) {
+      text-align: center;
+    }
+
     .subtitle {
       margin-bottom: 2.4rem;
+
+      @include responsive(560px) {
+        margin-bottom: 1.6rem;
+      }
     }
     .title-hero {
       margin-bottom: 1.8rem;
@@ -36,6 +67,16 @@
       margin-bottom: 4rem;
     }
     .buttons {
+      display: flex;
+      @include responsive(768px) {
+        justify-content: center;
+      }
+
+      @include responsive(560px) {
+        flex-direction: column;
+      }
+
+      font-size: 1.8rem;
       .value,
       .order {
         font-weight: 700;
@@ -58,21 +99,34 @@
     top: 9.7rem;
     z-index: 1;
 
+    @include responsive(1200px) {
+      top: 0;
+      max-width: 35.3rem;
+    }
+
+    @include responsive(768px) {
+      text-align: center;
+    }
+
     &-text {
       display: block;
       margin-bottom: 1.4rem;
       font-weight: 700;
-      font-size: 18px;
-      line-height: 20px;
+      font-size: 1.8rem;
+      line-height: 2rem;
     }
 
     .thumb {
       position: relative;
       width: 100%;
       margin-bottom: 5.7rem;
-      border: 4px solid #3265ea;
+      border: 0.4rem solid #3265ea;
       box-shadow: 0px 22.8941px 34.3411px -11.447px rgba(8, 8, 11, 0.8);
       overflow: hidden;
+
+      @include responsive(768px) {
+        margin-bottom: 3.2rem;
+      }
 
       &-img {
         @include img(cover);
@@ -90,11 +144,16 @@
       align-items: center;
       gap: 1.5rem;
 
+      @include responsive(768px) {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
       .text {
         width: 27.4rem;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 17px;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
       }
     }
   }
@@ -107,13 +166,27 @@
     justify-content: space-between;
     width: 100%;
 
+    @include responsive(1200px) {
+      flex-wrap: wrap;
+      column-gap: 0;
+      row-gap: 3.2rem;
+    }
+
     &-item {
       position: relative;
       display: flex;
       align-items: center;
       flex-direction: column;
       gap: 1.2rem;
-      flex: 1;
+      width: 15%;
+
+      @include responsive(1200px) {
+        width: 33.3%;
+      }
+
+      @include responsive(560px) {
+        width: 50%;
+      }
 
       .icon {
         width: 3.047rem;
@@ -134,6 +207,10 @@
         font-size: 1.6rem;
         line-height: 160%;
         color: #bdc2cb;
+
+        @include responsive(560px) {
+          max-width: 14rem;
+        }
       }
     }
   }

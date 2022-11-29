@@ -1,17 +1,37 @@
 header {
+  width: 100%;
   background-color: black;
-  padding: 1.4rem 0;
+  padding: 2rem 0;
+
+  @include responsive(560px) {
+    padding: 1.4rem 0;
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  .logo {
-    margin-right: -12%;
+  .logos {
+    width: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    img {
-      @include img(cover);
+    .logo-sony {
+      @include responsive(560px) {
+        display: none;
+      }
+    }
+
+    .logo {
+      @include responsive(560px) {
+        max-width: 14rem;
+      }
+      img {
+        @include img(cover);
+      }
     }
   }
 
@@ -24,6 +44,10 @@ header {
       font-weight: 600;
       font-size: 1.6rem;
       line-height: 1.7rem;
+
+      @include responsive(560px) {
+        display: none;
+      }
     }
 
     ul {
