@@ -220,20 +220,53 @@
   width: 100%;
   padding: 16rem 0 8rem;
   background: url('../assets/bg-story.png') no-repeat top center;
+
+  @include responsive(1200px) {
+    padding: 6rem 0;
+    background: none;
+  }
   .wrapper {
     display: flex;
+    align-items: center;
+    @include responsive(1200px) {
+      flex-direction: column-reverse;
+    }
   }
+
   .content {
     position: relative;
     margin-top: 6.1rem;
     width: 100%;
     max-width: 62.9rem;
+
+    @include responsive(1200px) {
+      max-width: 100%;
+      text-align: center;
+    }
+
     .subtitle {
       margin-bottom: 2.8rem;
+
+      @include responsive(1200px) {
+        justify-content: center;
+      }
     }
     .title-section {
       max-width: 50.2rem;
       margin-bottom: 2.4rem;
+
+      @include responsive(1200px) {
+        max-width: 65%;
+        margin: 2rem auto;
+      }
+
+      @include responsive(991px) {
+        max-width: 80%;
+      }
+
+      @include responsive(560px) {
+        max-width: 90%;
+      }
     }
     .paragraph {
       margin-bottom: 5.5rem;
@@ -243,6 +276,14 @@
       display: flex;
       align-items: center;
       gap: 4.5rem;
+
+      @include responsive(1200px) {
+        justify-content: center;
+      }
+
+      @include responsive(560px) {
+        flex-direction: column;
+      }
 
       &-text {
         width: 100%;
@@ -260,6 +301,16 @@
     left: 4rem;
     width: 100%;
     max-width: 76.3rem;
+
+    @include responsive(1200px) {
+      top: 0;
+      left: 0;
+      margin-bottom: 4rem;
+    }
+
+    @include responsive(560px) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -267,23 +318,57 @@
   padding-top: 17.6rem;
   padding-bottom: 14.3rem;
   background: url('../assets/bg-characters.png') no-repeat center center;
+
+  @include responsive(1200px) {
+    padding: 6rem 0;
+  }
+
+  @include responsive(560px) {
+    padding: 4rem 0;
+  }
   .wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include responsive(768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+    }
 
     .content {
       position: relative;
       width: 100%;
       max-width: 61.2rem;
+
+      @include responsive(768px) {
+        max-width: 100%;
+        text-align: center;
+      }
       .title-section {
         margin-top: 2.8rem;
         margin-bottom: 2.4rem;
+      }
+
+      .paragraph {
+        @include responsive(768px) {
+          max-width: 80%;
+          margin: 0 auto;
+        }
+
+        @include responsive(560px) {
+          max-width: 100%;
+        }
       }
     }
 
     .desc {
       display: flex;
       align-items: center;
+
+      @include responsive(560px) {
+        flex-direction: column;
+      }
 
       &-content {
         .date {
@@ -295,8 +380,20 @@
           line-height: 140%;
           color: #ffffff;
           margin-top: 2.3rem;
+
+          @include responsive(560px) {
+            max-width: 100%;
+            text-align: center;
+          }
         }
       }
+    }
+  }
+
+  .slide-characters {
+    margin-top: 6rem;
+    @include responsive(560px) {
+      margin-top: 8rem;
     }
   }
 }

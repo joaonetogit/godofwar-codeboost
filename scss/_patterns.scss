@@ -46,8 +46,7 @@
   }
 
   @include responsive(560px) {
-    font-size: 1.6rem;
-    max-width: 75%;
+    max-width: 65%;
     margin: 0 auto;
   }
 }
@@ -57,6 +56,10 @@
   font-size: 4.8rem;
   line-height: 130%;
   color: #ffffff;
+
+  @include responsive(560px) {
+    font-size: 3.6rem;
+  }
 }
 
 .paragraph {
@@ -64,6 +67,10 @@
   font-size: 2rem;
   line-height: 160%;
   color: #bdc2cb;
+
+  @include responsive(560px) {
+    font-size: 1.6rem;
+  }
 }
 
 .card {
@@ -78,6 +85,10 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+
+    @include responsive(991px) {
+      height: 44rem;
+    }
 
     img {
       width: 100%;
